@@ -41,3 +41,7 @@ INSERT INTO stop_passenger_counts (stop_id, bus_id, boarded, alighted, current_l
 (4, 2, 8, 15, 38),
 (5, 3, 25, 10, 50);
 
+-- Seed: stop_alerts
+INSERT INTO stop_alerts (stop_id, alert_type, severity, message, threshold) VALUES
+(3, 'crowded', 'high', 'Halte Senen melebihi kapasitas normal', 40),
+(1, 'delay', 'medium', 'Bus di Halte Monas terlambat lebih dari 15 menit', NULL);

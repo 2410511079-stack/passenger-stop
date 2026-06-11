@@ -1,4 +1,7 @@
+-- ============================================================
 -- PASSENGER SERVICE TABLES
+-- ============================================================
+
 CREATE TABLE IF NOT EXISTS passenger_passengers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -40,8 +43,10 @@ CREATE TABLE IF NOT EXISTS passenger_notifications (
     INDEX idx_created_at (created_at)
 );
 
-
+-- ============================================================
 -- STOP SERVICE TABLES
+-- ============================================================
+
 CREATE TABLE IF NOT EXISTS stop_stops (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -65,6 +70,7 @@ CREATE TABLE IF NOT EXISTS stop_passenger_counts (
     INDEX idx_stop_id (stop_id),
     INDEX idx_recorded_at (recorded_at)
 );
+
 CREATE TABLE IF NOT EXISTS stop_alerts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     stop_id INT NOT NULL,
@@ -76,4 +82,3 @@ CREATE TABLE IF NOT EXISTS stop_alerts (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     INDEX idx_stop_id (stop_id)
 );
-
